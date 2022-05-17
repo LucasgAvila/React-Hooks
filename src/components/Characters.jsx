@@ -2,6 +2,7 @@ import React, { useState, useReducer, useMemo, useRef,useCallback } from 'react'
 import Search from './Search';
 import useCharacters from '../hooks/useCharacters';
 
+
 const initialState = {
     favorites: []
 }
@@ -60,11 +61,16 @@ const Characters = () => {
                 </li>
             ))}
 
-            <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />
+            <Search search={search} searchInput={searchInput} handleSearch={handleSearch} />            
 
             {filteredUsers.map(character => (
             <div className="item" key={character.id}>
                 <h2>{character.name}</h2>
+                <img src={character.image} />
+                <h4> 
+                    ◉ {character.species}
+                   
+                </h4>
                 <button type='button' onClick={() => handleClick(character)}>Agregar a favoritos</button>
             </div>
         ))}
