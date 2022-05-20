@@ -1,6 +1,7 @@
 import React, { useState, useReducer, useMemo, useRef,useCallback } from 'react';
 import Search from './Search';
 import useCharacters from '../hooks/useCharacters';
+import '../styles/Characters.scss'
 
 
 const initialState = {
@@ -66,7 +67,9 @@ const Characters = () => {
             {filteredUsers.map(character => (
             <div className="item" key={character.id}>
                 <h2>{character.name}</h2>
-                <img src={character.image} />
+                <div>
+                <img src={character.image} alt='foto' />
+                </div>
                 <h4> 
                     ◉ {character.species}
                    

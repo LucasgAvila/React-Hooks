@@ -1,7 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Header from './components/Header';
 import Characters from './components/Characters';
-import './App.css';
+import './App.scss'
 
 
 function App() {
